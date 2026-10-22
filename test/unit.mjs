@@ -97,6 +97,10 @@ try {
     assert.equal(typeof tool.parameters, 'object', `${tool.name} has parameters`)
     assert.equal(typeof tool.output.render, 'function', `${tool.name} has renderer`)
     assert.equal(tool.output.schema.type, 'object', `${tool.name} output schema`)
+    const parts = tool.output.render({}, { ok: true })
+    assert.ok(Array.isArray(parts), `${tool.name} render returns content parts`)
+    assert.equal(parts[0].type, 'text')
+    assert.deepEqual(JSON.parse(parts[0].text), { ok: true })
   }
 
   assert.equal(skills.length, 1, 'one bundled skill')
@@ -129,3 +133,4 @@ try {
 } finally {
   await rm(NODE_MODULES, { recursive: true, force: true })
 }
+

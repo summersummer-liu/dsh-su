@@ -56,7 +56,9 @@ const PACKAGE_VERSION = JSON.parse(readFileSync(join(PACKAGE_ROOT, 'package.json
 const SKILL_ROOT = join(PACKAGE_ROOT, 'skills', 'sketchup-modeling')
 const SKILL_PATH = join(SKILL_ROOT, 'SKILL.md')
 
-const renderJson = (_args, value) => JSON.stringify(value, null, 2)
+// DSH tool renderers must return content parts, not a bare string.
+// Called as render(args, value) -> renderJson(value), so accept a single value.
+const renderJson = (value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]
 
 function clip(text, max) {
   const value = String(text ?? '')

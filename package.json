@@ -1,6 +1,6 @@
 {
   "name": "dsh-su",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness ↔ SketchUp bridge plugin: drive a live SketchUp session (inspect, run Ruby, save .skp, screenshot) over a bundled local TCP bridge extension.",
   "type": "module",
   "main": "index.js",

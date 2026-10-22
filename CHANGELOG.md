@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 - 2026-10-22
+
+- Fix: tool renderers now return DSH content parts (`[{ type: 'text', text }]`) instead of a bare JSON string; every `su_*` tool previously failed with "output.render returned non-lossless JSON".
+- Fix: renderer signature mismatch (`render(args, value)` vs `renderJson(value)`) that produced `undefined` text.
+- Tests: unit test now asserts the render contract for all 8 tools.
 ## 0.1.0 — 2026-10-22
 
 Initial release.
