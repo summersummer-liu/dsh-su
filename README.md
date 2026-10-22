@@ -1,6 +1,5 @@
 # dsh-su — SketchUp bridge for DeepSeek Harness
 
-[![test](https://github.com/summersummer-liu/dsh-su/actions/workflows/test.yml/badge.svg)](https://github.com/summersummer-liu/dsh-su/actions/workflows/test.yml)
 
 A **DeepSeek Harness (DSH) plugin** that turns a live SketchUp Pro session into agent
 tools: run Ruby task scripts, inspect the model, save `.skp` files and capture viewport
