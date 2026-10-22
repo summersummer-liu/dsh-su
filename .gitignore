@@ -1,0 +1,12 @@
+# dependencies / build output
+node_modules/
+dist/
+test/tmp/
+*.log
+*.tmp
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

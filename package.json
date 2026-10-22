@@ -1,0 +1,60 @@
+{
+  "name": "dsh-su",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness ↔ SketchUp bridge plugin: drive a live SketchUp session (inspect, run Ruby, save .skp, screenshot) over a bundled local TCP bridge extension.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "lib",
+    "sketchup",
+    "skills",
+    "scripts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "docs"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "sketchup",
+    "3d-modeling",
+    "bridge",
+    "agent-skill"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6 || ^0.2.0-rc.2 || ^0.2.1-alpha.1",
+    "@deepseek-ai/schemastery": "^3.18.1 || ^3.18.5-alpha.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "author": "summersummer-liu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/summersummer-liu/dsh-su.git"
+  },
+  "homepage": "https://github.com/summersummer-liu/dsh-su#readme",
+  "bugs": {
+    "url": "https://github.com/summersummer-liu/dsh-su/issues"
+  }
+}

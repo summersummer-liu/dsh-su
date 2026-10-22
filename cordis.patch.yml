@@ -1,0 +1,22 @@
+# dsh-su bundle registration (generic defaults).
+#
+# Paths default to auto-detection; override sketchupExecutable / templatePath
+# in your DSH profile's cordis.patch.yml when SketchUp lives elsewhere:
+#
+#   - id: su-modeling
+#     name: dsh-su
+#     config:
+#       sketchupExecutable: 'C:\Program Files\SketchUp\SketchUp 2023\SketchUp.exe'
+#       templatePath: 'C:\Program Files\SketchUp\SketchUp 2023\Resources\en-US\Templates\Temp01a - Simple.skp'
+- insert:
+    - id: su-modeling
+      name: dsh-su
+      config:
+        host: '127.0.0.1'
+        port: 47311
+        timeoutMs: 180000
+        launchTimeoutMs: 240000
+        maxOutputChars: 20000
+        restrictToWorkspace: true
+        autoInstallExtension: true
+        registerSkill: true
